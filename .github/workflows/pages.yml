@@ -24,6 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      # The page's CSS and JS URLs carry the commit, so a CDN in front of
+      # Pages serves the new files at once instead of what it cached.
+      - name: Stamp asset URLs
+        run: sed -i -e "s#href=\"viz.css\"#href=\"viz.css?v=${GITHUB_SHA::8}\"#" -e "s#src=\"viz.js\"#src=\"viz.js?v=${GITHUB_SHA::8}\"#" yoga/viz/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: yoga/viz
