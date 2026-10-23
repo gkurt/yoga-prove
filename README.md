@@ -6,6 +6,8 @@ The idea comes from Cheng Lou's [Handwired](https://github.com/chenglou/handwire
 
 It is a research prototype: a subset of Yoga, layouts written as trees in TypeScript, and checks written by hand.
 
+**See it:** [gkurt.com/yoga-prove](https://gkurt.com/yoga-prove/) shows every check, with sliders for its inputs and the checker's answer for the whole range.
+
 ## What's here
 
 - [prove/](prove): the checker. Interval and symbolic bounds, back-substitution, and a branch-and-bound search over the inputs, in the style of α,β-CROWN, extended for the division, products and branches that layout needs.
