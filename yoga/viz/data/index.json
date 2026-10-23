@@ -1,0 +1,80 @@
+[
+ {
+  "id": "design-rules",
+  "title": "The design holds",
+  "question": "Do the design's rules hold at every size: equal buttons stay equal, a centered title stays centered, items in a list share one left edge?",
+  "file": "design-rules.json"
+ },
+ {
+  "id": "font-scale",
+  "title": "Large text",
+  "question": "Does the layout hold at every system text size, from 100% to the largest accessibility size?",
+  "file": "font-scale.json"
+ },
+ {
+  "id": "image-aspect",
+  "title": "Images keep their shape",
+  "question": "Can an image ever be stretched or squashed out of its aspect ratio?",
+  "file": "image-aspect.json"
+ },
+ {
+  "id": "image-scale",
+  "title": "Images stay sharp",
+  "question": "Can an image ever be drawn larger than its native size, so it looks blurry?",
+  "file": "image-scale.json"
+ },
+ {
+  "id": "keyboard",
+  "title": "Above the keyboard",
+  "question": "With the on-screen keyboard open at any height, do the field being typed in and its button stay visible above it?",
+  "file": "keyboard.json"
+ },
+ {
+  "id": "labels-fit",
+  "title": "Labels are never cut off",
+  "question": "Can a label that must be read in full, such as a form label, a price or a button, ever get cut off, at any screen size and any label up to its stated length?",
+  "file": "labels-fit.json"
+ },
+ {
+  "id": "layout-shift",
+  "title": "Nothing moves when content loads",
+  "question": "Can content that loads later, such as a photo, an ad or a banner, push what the user is about to tap or read?",
+  "file": "layout-shift.json"
+ },
+ {
+  "id": "line-length",
+  "title": "Lines stay readable",
+  "question": "Do text columns stay readable: never squeezed below about 15 characters, never stretched past about 80?",
+  "file": "line-length.json"
+ },
+ {
+  "id": "overflow",
+  "title": "Nothing sticks out",
+  "question": "Can any element stick out of its parent, or overlap its neighbour, at any screen size and text length?",
+  "file": "overflow.json"
+ },
+ {
+  "id": "resize-jumps",
+  "title": "Nothing jumps",
+  "question": "Does anything jump when the window is resized a little, or move the wrong way when a text gets longer?",
+  "file": "resize-jumps.json"
+ },
+ {
+  "id": "safe-areas",
+  "title": "Clear of the notch",
+  "question": "Do buttons and text stay clear of the notch, the status bar and the home indicator, for any size of them?",
+  "file": "safe-areas.json"
+ },
+ {
+  "id": "tap-targets",
+  "title": "Big enough to tap",
+  "question": "Can any button get smaller than 44 × 44 px, Apple's minimum tap target, or end up closer than 8 px to its neighbour?",
+  "file": "tap-targets.json"
+ },
+ {
+  "id": "translations",
+  "title": "Longer translations",
+  "question": "Does the layout hold when every label is up to 1.5 times as long as in English, as in German or Finnish?",
+  "file": "translations.json"
+ }
+]

@@ -1,0 +1,20 @@
+{
+  "name": "yoga-prove",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "bun test --timeout 600000",
+    "typecheck": "tsc --noEmit -p .",
+    "lint": "oxlint --type-aware",
+    "probe": "bun yoga/probe.ts 60",
+    "viz": "cd yoga/viz && python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "oxlint": "latest",
+    "oxlint-tsgolint": "latest",
+    "typescript": "^7.0.2",
+    "yoga-layout": "3.2.1"
+  }
+}

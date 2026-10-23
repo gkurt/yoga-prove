@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formal verification for UI layout</title>
+<meta name="description" content="A research prototype that checks React Native (Yoga flexbox) layouts for every screen size and text length at once.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="viz.css">
+<script>
+  // The theme the viewer picked last time, before the page paints.
+  try {
+    const theme = localStorage.getItem('viz-theme')
+    if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme
+  } catch {}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <p class="kicker">Research prototype</p>
+      <h1>Formal verification for UI layout</h1>
+    </div>
+    <button class="theme" type="button" id="theme" aria-label="Color theme">Auto</button>
+  </div>
+  <div class="intro">
+    <p>Yoga, the flexbox engine behind React Native, is small enough to turn into plain arithmetic that a computer can reason about exactly. Each check below asks one question about a few example layouts. Instead of trying some screen sizes and text lengths, the checker covers <em>every</em> size in a range at once. When a layout can break, it finds an exact case, and the real Yoga engine lays that case out the same way.</p>
+    <p>Drag the sliders to change the screen size and how long each text is. The preview is laid out in your browser by the same arithmetic, number for number.</p>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="checks" aria-label="Checks">
+    <details id="checks-details" open>
+      <summary>Checks <span class="count" id="checks-count"></span></summary>
+      <ol id="checks-list"></ol>
+    </details>
+  </nav>
+
+  <main id="main">
+    <p class="loading" id="status">Loading checks…</p>
+  </main>
+</div>
+
+<footer class="foot">
+  <p>Data from <code>bun yoga/probe.ts</code>. A layout is checked for every combination of inputs on a 1/64 px grid inside the ranges shown next to each slider; nothing outside those ranges is covered.</p>
+</footer>
+
+<script src="viz.js"></script>
+</body>
+</html>
