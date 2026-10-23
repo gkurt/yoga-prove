@@ -113,6 +113,9 @@ h1 { margin: 0; font-size: clamp(24px, 3.4vw, 34px); line-height: 1.15; }
   padding: 4px 12px; font-size: 13px; color: var(--muted); cursor: pointer;
 }
 .theme:hover { color: var(--ink); border-color: var(--ink); }
+.top-actions { flex: none; display: flex; gap: 8px; align-items: center; }
+a.theme { text-decoration: none; line-height: 1.5; }
+.foot a { color: inherit; }
 
 /* Page layout */
 .layout {

@@ -24,7 +24,10 @@
       <p class="kicker">Research prototype</p>
       <h1>Formal verification for UI layout</h1>
     </div>
-    <button class="theme" type="button" id="theme" aria-label="Color theme">Auto</button>
+    <div class="top-actions">
+      <a class="theme" href="https://github.com/gkurt/yoga-prove">Source on GitHub</a>
+      <button class="theme" type="button" id="theme" aria-label="Color theme">Auto</button>
+    </div>
   </div>
   <div class="intro">
     <p>Yoga, the flexbox engine behind React Native, is small enough to turn into plain arithmetic that a computer can reason about exactly. Each check below asks one question about a few example layouts. Instead of trying some screen sizes and text lengths, the checker covers <em>every</em> size in a range at once. When a layout can break, it finds an exact case, and the real Yoga engine lays that case out the same way.</p>
@@ -46,7 +49,7 @@
 </div>
 
 <footer class="foot">
-  <p>Data from <code>bun yoga/probe.ts</code>. A layout is checked for every combination of inputs on a 1/64 px grid inside the ranges shown next to each slider; nothing outside those ranges is covered.</p>
+  <p>Data from <code>bun yoga/probe.ts</code>. A layout is checked for every combination of inputs on a 1/64 px grid inside the ranges shown next to each slider; nothing outside those ranges is covered. The code, and how to run it yourself: <a href="https://github.com/gkurt/yoga-prove">github.com/gkurt/yoga-prove</a>.</p>
 </footer>
 
 <script src="viz.js"></script>
